@@ -1,0 +1,285 @@
+html{
+background: #002394;
+background: radial-gradient(circle, rgba(0, 35, 148, 1) 0%, rgba(168, 210, 255, 1) 100%);
+}
+
+.header-sticky{
+    padding: 12px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+/* HEADER */
+.header {
+    padding: 12px 25px;
+    background-color: rgba(255, 255, 255, 0.484);
+    border-radius: 20px;
+}
+
+/* NAVBAR */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo gauche / menu droite */
+}
+
+
+/* MENU DROITE */
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+/* LIENS DU MENU */
+.menu a {
+    text-decoration: none;
+    color: #011664;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* EFFET HOVER */
+.menu a:hover {
+    color: #649fcc;
+}
+
+/* LOGO */
+.nav-bar img {
+    cursor: pointer;
+}
+
+/* ===================== */
+/* HERO (ACCUEIL) */
+/* ===================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    margin: 5px 0;
+    color: #011664;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Boutons */
+.btn {
+    background-color: #cc40cc;
+    color: rgb(255, 255, 255);
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: #cc40cc;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+   background-color: #e46fe4cd;
+}
+
+.btn-secondary:hover {
+   background-color: #e46fe4cd;
+}
+
+
+
+.text {
+    text-align: center;
+    padding: 10px 20px;
+
+}
+
+.text h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 18px;
+    color: #b2afaf;
+    max-width: 600px;
+    margin: 0 auto; /* centre le texte avec max-width */
+    line-height: 1.6;
+}
+
+/* ===================== */
+/* STATS (CARTES) */
+/* ===================== */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 50px 20px;
+
+}
+
+.stat-carde {
+    background-color: rgba(255, 255, 255, 0.484);
+    padding: 25px;
+    width: 180px;
+    text-align: center;
+    border-radius: 12px;
+
+    border: 1px solid transparent; /* bordure invisible au départ */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-carde:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2); /* bordure apparaît */
+    box-shadow: 5px 5px rgba(0,0,0,0.12); /* optionnel : ombre légèrement plus forte */
+}
+
+
+/* Icônes */
+.stat-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Valeurs */
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #011664;
+}
+
+/* Labels */
+.stat-label {
+    margin-top: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Premier groupe */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 25px;
+    width: 180px;
+    text-align: center;
+
+}
+/* Deuxième groupe */
+.stats-advanced {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+/* Cartes avancées */
+.stat-card-advanced {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Titre des cartes */
+.stat-card-advanced .stat-big-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #011664;
+    margin-bottom: 10px;
+}
+
+/* Responsive : 1 carte par ligne sur mobile */
+@media (max-width: 600px) {
+    .stats-advanced {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* FOOTER */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.484);
+    padding: 40px 20px;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+/* Chaque section */
+.footer-section {
+    flex: 1 1 200px; /* largeur minimale 200px */
+    min-width: 200px;
+}
+
+/* Titres sections */
+.footer-section h3 {
+    font-size: 18px;
+    color: #011664;
+    margin-bottom: 12px;
+}
+
+/* Paragraphes et textes */
+.footer-section p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Liens de navigation */
+.footer-section a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #0077cc;
+}
