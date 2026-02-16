@@ -1,0 +1,310 @@
+/* ===================== */
+/* FOND GLOBAL */
+/* ===================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #cacacaad;
+}
+
+
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+
+.header-sticky {
+    padding: 12px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header {
+    padding: 12px 25px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+}
+
+/* NAVBAR */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #011664;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #649fcc;
+}
+
+.nav-bar img {
+    cursor: pointer;
+}
+
+
+/* ===================== */
+/* HERO */
+/* ===================== */
+/* ===================== */
+/* SECTION AVEC IMAGE */
+/* ===================== */
+.text {
+    text-align: center;
+    padding: 50px 30px;
+    color: white; /* ← important */
+}
+
+
+.top-section {
+    position: relative;
+    background-image: url("Efrei-plan-strategique.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* voile sombre pour lisibilité */
+.top-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+/* contenu au-dessus du voile */
+.top-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+
+/* voile sombre pour lisibilité */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    margin: 5px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    margin: 5px 0;
+    color: #e0e0e0;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #f0f0f0;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Boutons */
+.btn {
+    background-color: #cc40cc;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: #cc40cc;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: #e46fe4cd;
+}
+
+
+/* ===================== */
+/* SECTION TEXTE */
+/* ===================== */
+
+.text {
+    text-align: center;
+    padding: 57px 45px;
+}
+
+.text h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 18px;
+    color: #e0e0e0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* ===================== */
+/* CARTES STATS */
+/* ===================== */
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 25px;
+    width: 180px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 5px 5px rgba(0,0,0,0.12);
+}
+
+.stat-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #011664;
+}
+
+.stat-label {
+    margin-top: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* ===================== */
+/* CARTES AVANCÉES */
+/* ===================== */
+
+.stats-advanced {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.stat-card-advanced {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 3px;
+    text-align: center;
+}
+
+.stat-card-advanced .stat-big-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #011664;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .stats-advanced {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.55);
+    padding: 40px 20px;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    color: #011664;
+    margin-bottom: 12px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #0077cc;
+}
