@@ -37,3 +37,20 @@ document.querySelectorAll('.course-section, .stat-card').forEach(el => {
     el.style.transition = "all 0.6s ease-out";
     observer.observe(el);
 });
+
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}, 4500); 
